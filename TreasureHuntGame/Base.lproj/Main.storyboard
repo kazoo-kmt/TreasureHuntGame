@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TreasureHuntGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVN-TT-bzj">
+                                <state key="normal" title="Reset score"/>
+                                <connections>
+                                    <action selector="resetScoreButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6TX-GB-JXf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUT-3W-A5m">
+                                <state key="normal" title="Reset positions"/>
+                                <connections>
+                                    <action selector="resetPositionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efJ-CL-Uvo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRC-UV-DLk">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbm-Or-EvY">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcf-UV-cnx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dl2-Ju-jr3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHr-Nl-2LM">
+                                <state key="normal" title="Start simulation"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sbf-ee-Pb1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dl2-Ju-jr3" firstAttribute="top" secondItem="fcf-UV-cnx" secondAttribute="bottom" constant="5" id="4Zc-Vk-9jH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dl2-Ju-jr3" secondAttribute="trailing" constant="20" id="6ML-jE-PZn"/>
+                            <constraint firstItem="vUT-3W-A5m" firstAttribute="top" secondItem="UHr-Nl-2LM" secondAttribute="bottom" constant="5" id="ODZ-If-RYr"/>
+                            <constraint firstItem="kbm-Or-EvY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="ORe-7D-53l"/>
+                            <constraint firstItem="vUT-3W-A5m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Umc-AH-YVB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mVN-TT-bzj" secondAttribute="bottom" constant="20" id="VRj-Ej-KLO"/>
+                            <constraint firstItem="mVN-TT-bzj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cXi-4Y-Fxx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fcf-UV-cnx" secondAttribute="trailing" constant="20" id="d1v-Im-DIB"/>
+                            <constraint firstItem="UHr-Nl-2LM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h2Q-nx-UtO"/>
+                            <constraint firstItem="mVN-TT-bzj" firstAttribute="top" secondItem="vUT-3W-A5m" secondAttribute="bottom" constant="20" id="jVe-Hg-rFC"/>
+                            <constraint firstItem="kbm-Or-EvY" firstAttribute="top" secondItem="VRC-UV-DLk" secondAttribute="bottom" constant="5" id="m6B-kl-wKH"/>
+                            <constraint firstItem="fcf-UV-cnx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="quZ-qe-wWA"/>
+                            <constraint firstItem="VRC-UV-DLk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="xfi-px-UmF"/>
+                            <constraint firstItem="VRC-UV-DLk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="yi6-E8-7nk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scorePlayer1Label" destination="kbm-Or-EvY" id="TKk-A2-lUJ"/>
+                        <outlet property="scorePlayer2Label" destination="dl2-Ju-jr3" id="XRC-jE-d8F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
