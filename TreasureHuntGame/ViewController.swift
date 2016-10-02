@@ -124,17 +124,17 @@ class ViewController: UIViewController {
     // Player1's turn
     if playerTurn == .playerOne {
       
-      let newPos: (Int, Int) = search(player: player1)
-      player1 = move(newRowIndex: newPos.0, newColumnIndex: newPos.1, player: player1)
-      
+      if let newPos: (Int, Int) = search(player: player1) {
+        player1 = move(newRowIndex: newPos.0, newColumnIndex: newPos.1, player: player1)
+      }
       playerTurn = .playerTwo
       
       // Player2's turn
     } else {
       
-      let newPos: (Int, Int) = search(player: player2)
-      player2 = move(newRowIndex: newPos.0, newColumnIndex: newPos.1, player: player2)
-      
+      if let newPos: (Int, Int) = search(player: player2) {
+        player2 = move(newRowIndex: newPos.0, newColumnIndex: newPos.1, player: player2)
+      }
       playerTurn = .playerOne
     }
     
@@ -145,7 +145,7 @@ class ViewController: UIViewController {
   }
   
   
-  func search(player: Player) -> (Int, Int){
+  func search(player: Player) -> (Int, Int)? {
     
     var visitedByPlayerState: TileView.State
     switch player.playerId {
@@ -184,11 +184,11 @@ class ViewController: UIViewController {
         return (newRowIndex, newColumnIndex)
       }
     }
-    return (-1, -1)
+    return nil
   }
   
   
-  func move(newRowIndex: Int, newColumnIndex: Int, player: Player) -> Player{
+  func move(newRowIndex: Int, newColumnIndex: Int, player: Player) -> Player {
     return gridView.move(newRowIndex: newRowIndex, newColumnIndex: newColumnIndex, player: player)
   }
   
